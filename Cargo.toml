@@ -1,0 +1,13 @@
+[package]
+name = "bump_alloc"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
+
+[dependencies]
+spin = { version = "0.9.7", default-features = false, features = ["mutex", "spin_mutex"] }

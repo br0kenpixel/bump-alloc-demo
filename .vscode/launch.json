@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'bump_alloc'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=bump_alloc",
+                    "--package=bump_alloc"
+                ],
+                "filter": {
+                    "name": "bump_alloc",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'bump_alloc'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=bump_alloc",
+                    "--package=bump_alloc"
+                ],
+                "filter": {
+                    "name": "bump_alloc",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
